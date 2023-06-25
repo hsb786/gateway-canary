@@ -71,7 +71,7 @@ canary:
           headerParam: #白名单匹配
             device_id: 41ec3710f89a6132,6e9b1c790c2946ac
             userId: 1111111,222222
-          weight:
+          weight: 0
 ```
 2. 发布灰度组
 3. 白名单测试
@@ -91,9 +91,10 @@ canary:
 ```
 5. 发布正式组
 6. 关闭灰度功能
-   canary:
-   enabled: false
-   services:
+```
+canary:
+  enabled: false
+  services:
     - serviceId: user
       weightEnabled: false
       versions:
@@ -102,4 +103,4 @@ canary:
           device_id: 41ec3710f89a6132,6e9b1c790c2946ac
           userId: 1111111,222222
           weight: 10
-
+```
