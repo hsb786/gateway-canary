@@ -54,10 +54,12 @@ canary:
             userId: 1111111,222222
           weight: 0 # 权重值 0到100
 ```            
-![灰度版本流程](./doc/image/灰度版本流程.jpg)
+
 
 #### 根据版本过滤实例
-自定义CanaryServiceInstanceListSupplier，根据CanaryProperties(灰度配置)和CanaryVersionRule(灰度规则)匹配灰度版本，再根据灰度版本过滤实例
+自定义CanaryServiceInstanceListSupplier
++ 根据CanaryProperties(灰度配置)和CanaryVersionRule(灰度规则)计算应该命中的灰度版本
++ 根据灰度版本过滤实例
 ![CanaryServiceInstanceListSupplier](./doc/image/CanaryServiceInstanceListSupplier.png)
 
 
